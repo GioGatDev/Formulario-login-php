@@ -24,7 +24,9 @@
   <div class="form-group">
     <label for="usuario">Usuario:</label>
     <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingresa un Usuario">
-    <?php if(in_array('<div class="alert alert-danger" role="alert">El usuario debe tener por lo menos 5 caracteres y menor de 50</div>', $error_array)) echo '<div class="alert alert-danger" role="alert">El usuario debe tener por lo menos 5 caracteres y menor de 50</div>'; ?>
+    <?php if(in_array('<div class="alert alert-danger" role="alert">El usuario debe tener por lo menos 5 caracteres y menor de 50</div>', $error_array)) echo '<div class="alert alert-danger" role="alert">El usuario debe tener por lo menos 5 caracteres y menor de 50</div>';
+    else if(in_array('<div class="alert alert-warning" role="alert">El usuario ya existe</div>', $error_array)) echo '<div class="alert alert-warning" role="alert">El usuario ya existe</div>'; 
+    ?>
   </div>
   <div class="form-group">
     <label for="correo">Correo:</label>
@@ -33,6 +35,10 @@
   <div class="form-group">
     <label for="confirmemail">Confirma tu correo:</label>
     <input type="email" class="form-control" id="confirmemail" name="correo2" aria-describedby="emailHelp" placeholder="Confirma tu Email">
+    <?php if(in_array('<div class="alert alert-warning" role="alert">Los correos no son iguales</div>', $error_array)) echo '<div class="alert alert-warning" role="alert">Los correos no son iguales</div>';
+    else if(in_array('<div class="alert alert-warning" role="alert">El correo ya está registrado</div>', $error_array)) echo '<div class="alert alert-warning" role="alert">El correo ya está registrado</div>'; 
+    else if(in_array('<div class="alert alert-warning" role="alert">Formato de correo no valido</div>', $error_array)) echo '<div class="alert alert-warning" role="alert">Formato de correo no valido</div>'; 
+    ?>
   </div>
   <div class="form-group">
     <label for="pass">Contraseña:</label>
