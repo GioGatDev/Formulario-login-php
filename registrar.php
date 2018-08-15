@@ -14,12 +14,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <!--Bootstrap 4-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--Estilos Custom-->
+    <link rel="stylesheet" href="css/estilos.css">
 
 </head>
 <body>
   <div class="container">
   <div class="row">
   <div class="col-md-12">
+  <h1 class="display-1 text-center">Registro</h1>
   <form action="registrar.php" method="POST">
   <div class="form-group">
     <label for="usuario">Usuario:</label>
@@ -54,6 +57,7 @@
   </div>
   <div class="alert alert-info mt-2" role="alert">La contraseña debe contener entre 6 y 30 caracteres</div>
   <button type="submit" name="registrarse" class="btn btn-primary">Registrar</button>
+  <a href="login.php">¿Ya tienes cuenta?, inicia sesión</a>
 </form>
   </div>
   </div>
