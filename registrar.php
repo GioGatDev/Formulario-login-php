@@ -19,56 +19,57 @@
 
 </head>
 <body>
-  <div class="container">
-  <div class="row">
-  <div class="col-md-12">
+  <div class="mt-40">
+  <div class="container text-center">
+  <div class="row align-items-center">
+  <div class="col-md-6 mx-auto shadow p-3 mb-5 bg-white rounded">
   <h1 class="display-1 text-center">Registro</h1>
+  <div class="form-row justify-content-md-center">
   <form action="registrar.php" method="POST">
-  <div class="form-group">
+  <div class="form-group col-auto">
     <label for="usuario">Usuario:</label>
-    <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Ingresa un Usuario">
+    <input type="text" class="form-control text-center" name="usuario" id="usuario" placeholder="Ingresa un Usuario">
     <?php if(in_array('<div class="alert alert-danger mt-2" role="alert">El usuario debe tener por lo menos 5 caracteres y menor de 50</div>', $error_array)) echo '<div class="alert alert-danger mt-2" role="alert">El usuario debe tener por lo menos 5 caracteres y menor de 50</div>';
     else if(in_array('<div class="alert alert-warning mt-2" role="alert">El usuario ya existe</div>', $error_array)) echo '<div class="alert alert-warning mt-2" role="alert">El usuario ya existe</div>'; 
     ?>
   </div>
-  <div class="form-group">
-    <label for="correo">Correo:</label>
-    <input type="email" class="form-control" id="correo" name="correo" aria-describedby="emailHelp" placeholder="Ingresa tu Email">
   </div>
-  <div class="form-group">
+  <div class="form-row">
+  <div class="form-group col">
+    <label for="correo">Correo:</label>
+    <input type="email" class="form-control text-center" id="correo" name="correo" aria-describedby="emailHelp" placeholder="Ingresa tu Email">
+  </div>
+  <div class="form-group col">
     <label for="confirmemail">Confirma tu correo:</label>
-    <input type="email" class="form-control" id="confirmemail" name="correo2" aria-describedby="emailHelp" placeholder="Confirma tu Email">
+    <input type="email" class="form-control text-center" id="confirmemail" name="correo2" aria-describedby="emailHelp" placeholder="Confirma tu Email">
     <?php if(in_array('<div class="alert alert-warning mt-2" role="alert">Los correos no son iguales</div>', $error_array)) echo '<div class="alert alert-warning mt-2" role="alert">Los correos no son iguales</div>';
     else if(in_array('<div class="alert alert-warning mt-2" role="alert">El correo ya está registrado</div>', $error_array)) echo '<div class="alert alert-warning mt-2" role="alert">El correo ya está registrado</div>'; 
     else if(in_array('<div class="alert alert-warning mt-2" role="alert">Formato de correo no valido</div>', $error_array)) echo '<div class="alert alert-warning mt-2" role="alert">Formato de correo no valido</div>'; 
     ?>
   </div>
-  <div class="form-group">
+  </div>
+  <div class="form-row">
+  <div class="form-group col">
     <label for="pass">Contraseña:</label>
-    <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña">
+    <input type="password" class="form-control text-center" id="pass" name="pass" placeholder="Contraseña">
     <?php if(in_array('<div class="alert alert-danger" role="alert">La contraseña debe tener por lo menos 6 caracteres y menos de 30</div>', $error_array)) echo '<div class="alert alert-danger" role="alert">La contraseña debe tener por lo menos 6 caracteres y menos de 30</div>';  ?>
   </div>
-  <div class="form-group">
+  <div class="form-group col">
     <label for="pass2">Confirma tu contraseña:</label>
-    <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Confirma tu contraseña">
+    <input type="password" class="form-control text-center" id="pass2" name="pass2" placeholder="Confirma tu contraseña">
     <?php if(in_array('<div class="alert alert-warning mt-2" role="alert">Las contraseñas no son iguales</div>', $error_array)) echo '<div class="alert alert-warning mt-2" role="alert">Las contraseñas no son iguales</div>';
     else if(in_array('<div class="alert alert-danger mt-2" role="alert">La contraseña debe tener por lo menos 6 caracteres y menos de 30</div>', $error_array)) echo '<div class="alert alert-danger mt-2" role="alert">La contraseña debe tener por lo menos 6 caracteres y menos de 30</div>'; 
     ?>
   </div>
+  </div>
   <div class="alert alert-info mt-2" role="alert">La contraseña debe contener entre 6 y 30 caracteres</div>
-  <button type="submit" name="registrarse" class="btn btn-primary">Registrar</button>
-  <a href="login.php">¿Ya tienes cuenta?, inicia sesión</a>
+  <button type="submit" name="registrarse" class="btn btn-primary">Registrar</button><br/>
+  <a class="mt-2 mb-3" href="login.php">¿Ya tienes cuenta?, inicia sesión</a>
 </form>
   </div>
   </div>
   </div>
-
-
-
-
-
-
-
+  </div>
 <!--Scripts-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

@@ -20,8 +20,8 @@
 </head>
 <body>
   <div class="container">
-  <div class="row">
-  <div class="col-md-12">
+  <div class="row text-center mt-20">
+  <div class="col-md-3 shadow p-3 mb-5 bg-white rounded mx-auto">
   <h1 class="display-1 text-center">LOGIN</h1>
   <form action="login.php" method="POST">
   <div class="form-group">
@@ -35,8 +35,8 @@
   <?php 
   if(in_array('<div class="alert alert-danger mt-2" role="alert">Usuario o contraseña incorrectos</div>', $error_array)) echo '<div class="alert alert-danger mt-2" role="alert">Usuario o contraseña incorrectos</div>';
   ?>
-  <button type="submit" name="login" class="btn btn-primary">Iniciar sesión</button>
-  <a href="registrar.php">¿Aún no tienes cuenta?, Registrarte</a>
+  <button type="submit" name="login" class="btn btn-primary">Iniciar sesión</button><br/>
+  <a class="mt-2" href="registrar.php">¿Aún no tienes cuenta?, Registrarte</a>
 </form>
   </div>
   </div>
